@@ -1,7 +1,8 @@
 /* =============================================================================================== */
 /* Global  */
 :root {
-  --body-bgc: rgb(43, 43, 43);
+  --body-bgc: rgb(60, 60, 60);
+  --body-bgc-darker: rgb(50, 50, 50);
   --card-bgc: rgb(114, 114, 114);
   --clear-color: #eeeeee;
   --red-color: #ec1616e5;
@@ -41,4 +42,82 @@ button {
 }
 .template__button:active {
   transform: scale(0.85);
+}
+/* =============================================================================================== */
+/* Logo  */
+#logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  background-color: var(--body-bgc-darker);
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ffffff49;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+h1 {
+  color: var(--clear-color);
+}
+h1 span {
+  color: var(--red-color);
+}
+/* =============================================================================================== */
+/* Content  */
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* =============================================================================================== */
+/* Searchbar  */
+#searchbar__container {
+  background-color: var(--body-bgc-darker);
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ffffff49;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+#searchbar {
+  padding: 6px 24px;
+  font-size: 20px;
+  border: 1px solid #ffffff49;
+  color: var(--clear-color);
+  border-radius: 10px;
+  background-color: var(--body-bgc-darker);
+}
+#search__button {
+  background-color: var(--red-color);
+  color: var(--clear-color);
+  border: 1px solid #ffffff49;
+  font-size: 16px;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 500;
+  margin: 10px 4px;
+}
+#search__button::placeholder {
+  color: var(--clear-color);
+}
+#search__button:hover {
+  transform: scale(0.95);
+  background-color: var(--red-clear-color);
+}
+#search__button:active {
+  transform: scale(0.85);
+}
+/* =============================================================================================== */
+/* Info  */
+.info__box {
+  background-color: var(--body-bgc-darker);
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ffffff49;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 300px;
 }
