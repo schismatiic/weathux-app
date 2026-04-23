@@ -44,6 +44,7 @@ A weather forecast web app built with **JavaScript** and bundled using **Webpack
 │   │── template.html
 │   │── style.css
 │   │── index.js
+│   │── assets/
 │   │── modules/
 │── package.json
 │── webpack.config.js

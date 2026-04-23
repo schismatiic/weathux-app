@@ -1,9 +1,12 @@
+import weather_hail_icon from "../assets/weather_hail.svg";
+
 const renderInfo = (container, searchbutton) => {
   //   ===============================================================================================
   //   Variables
   let toggle = true;
   //   ===============================================================================================
   //   Create element
+  const weather_hail = document.createElement("img");
   const info__box = document.createElement("div");
   const info__title = document.createElement("h3");
   const info__p = document.createElement("p");
@@ -17,9 +20,14 @@ const renderInfo = (container, searchbutton) => {
   info__box.className = "info__box";
   info__title.className = "info__title";
   info__p.className = "info__p";
+  weather_hail.className = "weather_hail";
+  //   ===============================================================================================
+  //   Src
+  weather_hail.src = weather_hail_icon;
   //   ===============================================================================================
   //   Append child
   info__box.appendChild(info__title);
+  info__box.appendChild(weather_hail);
   info__box.appendChild(info__p);
   container.appendChild(info__box);
   //   ===============================================================================================
