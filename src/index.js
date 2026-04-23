@@ -1,5 +1,6 @@
 import "./styles.css";
 import { renderInfo } from "./modules/renderInfo.js";
+import { renderWeather } from "./modules/renderWeather.js";
 //   ===============================================================================================
 //   DOM elements
 const searchbar = document.getElementById("searchbar");
@@ -9,17 +10,17 @@ const main__content = document.getElementById("main__content");
 //   Event listeners
 search__button.addEventListener("click", () => {
   const searchbar_value = searchbar.value;
-  console.log(searchbar_value);
+  getWeather(searchbar_value);
 });
 //   ===============================================================================================
 //   Function calls
 renderInfo(main__content, search__button);
 
-const getWeather = async () => {
+const getWeather = async (value) => {
   const response = await fetch(
-    "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/london?key=XBDNEYJKWZJBCTZ6GWSDL9SPT",
+    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${value}?key=XBDNEYJKWZJBCTZ6GWSDL9SPT`,
   );
   const weatherData = await response.json();
+  renderWeather(main__content, weatherData.address, weatherData.description);
   console.log(weatherData);
 };
-getWeather();

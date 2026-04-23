@@ -139,3 +139,18 @@ h1 span {
   width: 100px;
   margin: 10px 0;
 }
+/* =============================================================================================== */
+/* Searchbar  */
+.weather_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-bgc-darker);
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid var(--divisory-line);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 519.02px;
+}
