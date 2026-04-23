@@ -14,3 +14,12 @@ search__button.addEventListener("click", () => {
 //   ===============================================================================================
 //   Function calls
 renderInfo(main__content, search__button);
+
+const getWeather = async () => {
+  const response = await fetch(
+    "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/london?key=XBDNEYJKWZJBCTZ6GWSDL9SPT",
+  );
+  const weatherData = await response.json();
+  console.log(weatherData);
+};
+getWeather();
