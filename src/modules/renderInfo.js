@@ -1,6 +1,6 @@
 import weather_hail_icon from "../assets/weather_hail.svg";
 
-const renderInfo = (container, searchbutton) => {
+const renderInfo = (container, searchbutton, keydown) => {
   //   ===============================================================================================
   //   Variables
   let toggle = true;
@@ -38,6 +38,17 @@ const renderInfo = (container, searchbutton) => {
       info__box.removeChild(info__p);
       container.removeChild(info__box);
       toggle = false;
+    }
+  });
+  searchbar.addEventListener("keydown", (e) => {
+    if (toggle) {
+      if (e.key === "Enter" || e.keyCode === 13) {
+        e.preventDefault();
+        info__box.removeChild(info__title);
+        info__box.removeChild(info__p);
+        container.removeChild(info__box);
+        toggle = false;
+      }
     }
   });
 };

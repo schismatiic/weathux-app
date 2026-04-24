@@ -13,9 +13,16 @@ search__button.addEventListener("click", () => {
   const searchbar_value = searchbar.value;
   getWeather(searchbar_value);
 });
+searchbar.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.keyCode === 13) {
+    const searchbar_value = searchbar.value;
+    e.preventDefault();
+    getWeather(searchbar_value);
+  }
+});
 //   ===============================================================================================
 //   Function calls
-renderInfo(main__content, search__button);
+renderInfo(main__content, search__button, searchbar);
 
 const getWeather = async (value) => {
   const response = await fetch(
