@@ -73,15 +73,21 @@ h1 span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+#main__content {
+  width: 30%;
 }
 /* =============================================================================================== */
 /* Searchbar  */
 #searchbar__container {
+  display: flex;
   background-color: var(--body-bgc-darker);
   margin-top: 20px;
   padding: 20px;
   border: 1px solid var(--divisory-line);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 30%;
   border-radius: 10px;
 }
 #searchbar {
@@ -92,6 +98,8 @@ h1 span {
   border: 1px solid var(--divisory-line);
   border-radius: 6px;
   background-color: var(--body-bgc-darker);
+  width: 70%;
+  text-align: center;
 }
 #search__button {
   background-color: var(--red-color);
@@ -102,9 +110,7 @@ h1 span {
   border-radius: 6px;
   font-weight: 700;
   margin-left: 10px;
-}
-#search__button::placeholder {
-  color: var(--clear-color);
+  width: 30%;
 }
 #search__button:hover {
   transform: scale(0.95);
@@ -126,7 +132,7 @@ h1 span {
   border: 1px solid var(--divisory-line);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  width: 519.02px;
+  width: 100%;
 }
 .info__box h3 {
   font-size: 28px;
@@ -140,7 +146,7 @@ h1 span {
   margin: 10px 0;
 }
 /* =============================================================================================== */
-/* Searchbar  */
+/* Weather  */
 .weather_container {
   display: flex;
   flex-direction: column;
@@ -152,5 +158,40 @@ h1 span {
   border: 1px solid var(--divisory-line);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  width: 519.02px;
+}
+.city {
+  text-transform: uppercase;
+  font-size: 16px;
+  border-bottom: 1px solid var(--divisory-line);
+  padding-bottom: 8px;
+  width: 80%;
+  text-align: center;
+}
+.temperature {
+  margin: 20px 0;
+  font-size: 28px;
+  border: 1px solid var(--divisory-line);
+  background-color: var(--body-bgc);
+  padding: 8px 50px;
+}
+.description {
+  font-size: 10px;
+}
+.units__button {
+  background-color: var(--red-color);
+  color: var(--clear-color);
+  border: 1px solid var(--divisory-line);
+  font-size: 20px;
+  padding: 6px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.units__button:hover {
+  transform: scale(0.95);
+  background-color: var(--red-clear-color);
+}
+.units__button:active {
+  transform: scale(0.85);
 }

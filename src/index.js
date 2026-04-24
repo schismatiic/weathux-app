@@ -1,6 +1,7 @@
 import "./styles.css";
 import { renderInfo } from "./modules/renderInfo.js";
 import { renderWeather } from "./modules/renderWeather.js";
+
 //   ===============================================================================================
 //   DOM elements
 const searchbar = document.getElementById("searchbar");
@@ -21,6 +22,12 @@ const getWeather = async (value) => {
     `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${value}?key=XBDNEYJKWZJBCTZ6GWSDL9SPT`,
   );
   const weatherData = await response.json();
-  renderWeather(main__content, weatherData.address, weatherData.description);
+  renderWeather(
+    main__content,
+    weatherData.address,
+    weatherData.currentConditions.temp,
+    weatherData.currentConditions.conditions,
+    weatherData.description,
+  );
   console.log(weatherData);
 };
