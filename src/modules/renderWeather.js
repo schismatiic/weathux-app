@@ -13,7 +13,6 @@ const renderWeather = (
 ) => {
   if (cont === 0) {
     cont++;
-    console.log(cont);
     //   ===============================================================================================
     //   Variables
     let celsius = Math.round((5 / 9) * (temp - 32));

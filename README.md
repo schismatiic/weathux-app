@@ -104,4 +104,4 @@ In production, API keys should be stored securely (e.g., environment variables) 
 
 ## License
 
-This project is open-source and available under the MIT License.
+This project is open-source.

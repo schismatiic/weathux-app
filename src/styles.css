@@ -195,3 +195,14 @@ h1 span {
 .units__button:active {
   transform: scale(0.85);
 }
+/* =============================================================================================== */
+/* Loading  */
+#loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#loading img {
+  width: 80px;
+}
